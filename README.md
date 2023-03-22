@@ -22,3 +22,5 @@ https://github.com/Aaegis/spanishHwHelper
 https://github.com/Aaegis/spanishHwHelperV2
 
 The IDE I used to make this was Visual Studio Code (VSCode). My project also relies on a CDN in order to use Bootstrap 5. Bootstrap 5 was not developed by me, and was made by a third party.
+
+Since this is an assignment for the CPT, I will not be accepting any contributions, nor will I be reading any suggestions.
