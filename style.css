@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(106, 237, 150);
+    overflow: overlay;
+}
+
+button {
+    background-color:rgb(35, 33, 33);
+    color:white;
+    border-color:white;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+}
+
+textarea {
+    background-color:rgb(66, 62, 62);
+    border-radius: 20px;
+    padding: 3px;
+    color: white;
+}
+
+mark {
+    border-radius: 10px;
+    border-color: white;
+    background-color:rgb(66, 62, 62);
+    color: white;
+}
