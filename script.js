@@ -1,7 +1,8 @@
 /*
 BEFORE YOU EXAMINE THIS CODE
 
-Make sure you look at README.md. It has an explanation for this program's purpose and 
+Make sure you look at README.md. It has an explanation for this program's purpose and the comments below will make
+more sense.
 */
 
 // This variable is used in the list debugListType to test to see if the program works with variables.
@@ -12,10 +13,14 @@ through randomize(), and the return value will be set on the left panel.*/
 wordList = ["Python", "Javascript", "C", "Rust", "C++", "C#", "Go", "Ruby", "Lua", "Fortran", "Malbolge", "HTML",
 "CSS", "Java"];
 
+// These are the debug word lists. They can be put into parameters below and test to see if they work.
 var debugWordList = ["word1", "word2", "word3", "word4", "word5"];
 var debugListASCII = ["!", "@", "`", "ƒ", "•", "—", "Ÿ", "¥", "§", "©", "«", "¿", "á"];
 var debugListType = ["string", true, false, 1, 0.1, 0.0000000001, debugVar]; /* Double does not work. Unfortunately,
 JS does not support type casting.*/
+
+// Update the text input area with the words from wordList.
+document.getElementById('textInput').innerHTML = wordList;
 
 // Takes parameters to switch between multiple word lists if needed.
 /* This function is based off of the Fisher-Yates shuffling algorithm. I programmed it in my own way since I didn't
@@ -31,11 +36,32 @@ function randomize(array) {
     return array;
 }
 
+// When this button is clicked, it will call the randomize function and set it's value to the text area.
 document.getElementById('randomizeButton').onclick = function() {
     document.getElementById("textArea").innerHTML = randomize(wordList).join("\n"); // If a new word list is provided, insert a new argument here
 }
 
-// Just a fun little easter egg
+/* This function is for the text input. Upon clicking a button, the text area above will update based on the content
+of this text area.*/
+// This function takes parameters so it can work with other arrays in case debugging is needed.
+/* This function works by taking an array as an argument, then getting the value of textInput. Next, it splits the
+string into an array by separating it by commas. Lastly, it returns the updated wordList, which is the array that
+was separated by commas.
+*/
+function updateArray(array) {
+    array = document.getElementById('textInput').value;
+    var arraySplit = array.split(",");
+    document.getElementById('textArea').innerHTML = arraySplit;
+    wordList = arraySplit;
+    return wordList;
+}
+    
+// When the button is clicked, call updateArray to insert custom words inputted by the user in the text input area.
+document.getElementById('update').onclick = function() {
+    updateArray(wordList);
+}
+
+// Just a fun little easter egg. There's no purpose to this.
 var bogosort = ["|", "||", "|||", "||||", "|||||", "||||||", "|||||||", "||||||||", "|||||||||", "||||||||||"]; // 10 rows
 document.getElementById('bogosortButton').onclick = function() {
     document.getElementById('textArea').innerHTML = randomize(bogosort).join("\n");
