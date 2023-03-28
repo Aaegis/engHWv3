@@ -1,3 +1,5 @@
+This website is live at https://aaegis.github.io/engHWv3/
+
 A project to help students with Mr. Madden's English homework and for the CPT.
 
 This project is made to help students memorize word definitions for Mr. Madden's English vocabulary tests, as well any vocabulary on final(s). It was also created for the Create Performance Task for MS. Cabral's AP Computer Science Principles class.

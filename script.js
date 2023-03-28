@@ -3,6 +3,7 @@ BEFORE YOU EXAMINE THIS CODE
 
 Make sure you look at README.md. It has an explanation for this program's purpose and the comments below will make
 more sense.
+Don't forget to view the website live at https://aaegis.github.io/engHWv3/
 */
 
 // This variable is used in the list debugListType to test to see if the program works with variables.
@@ -24,7 +25,7 @@ document.getElementById('textInput').innerHTML = wordList;
 
 // Takes parameters to switch between multiple word lists if needed.
 /* This function is based off of the Fisher-Yates shuffling algorithm. I programmed it in my own way since I didn't
-like other people's examples. I discovered this algorithm on Stack Overflow by a user named coolaj86. See their 
+like other people's examples. I discovered this algorithm on a StackOverflow post by a user named coolaj86. See their 
 post here:
 https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 */
@@ -61,8 +62,10 @@ document.getElementById('update').onclick = function() {
     updateArray(wordList);
 }
 
-// Just a fun little easter egg. There's no purpose to this.
+// Just a fun little easter egg. There's no purpose to this. It just sets wordList to a bunch of lines so that the
+// user can repeatedly press the Randomize! Button and try to bogosort it.
 var bogosort = ["|", "||", "|||", "||||", "|||||", "||||||", "|||||||", "||||||||", "|||||||||", "||||||||||"]; // 10 rows
 document.getElementById('bogosortButton').onclick = function() {
-    document.getElementById('textArea').innerHTML = randomize(bogosort).join("\n");
+    wordList = bogosort;
+    document.getElementById('textArea').innerHTML = randomize(wordList).join("\n");
 }
