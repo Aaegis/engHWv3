@@ -14,9 +14,9 @@ var debugVar = "I am a debug variable. Please put me in the list debugListType!"
 
 /* These are where all the vocabulary words go. Once the Randomize! button is pressed, these will be passed 
 through randomize(), and the return value will be set on the left panel.*/
+wordList = ["Synthetic", "Toil", "Moil", "Cementation", "Despicable", "Excruciate", "Dogma", "Implementation",
+"Intimidation", "Specialization"];
 
-wordList = ["Python", "Javascript", "C", "Rust", "C++", "C#", "Go", "Ruby", "Lua", "Fortran", "Malbolge", "HTML",
-"CSS", "Java"];
 console.log("Loading main array - " + wordList);
 
 // These are the debug word lists. They can be put into parameters below and test to see if they work.
@@ -31,10 +31,8 @@ console.log("Loading selected wordlist - change value/array to select a differen
 document.getElementById('textInput').innerHTML = wordList;
 
 // Takes parameters to switch between multiple word lists if needed.
-/* This function is based off of the Fisher-Yates shuffling algorithm. I programmed it in my own way since I didn't
-like other people's examples. I discovered this algorithm on a StackOverflow post by a user named coolaj86. See their 
-post here:
-https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+/* This function is based off of the Fisher-Yates shuffling algorithm. I learned about it a while back, and I made
+changes since any examples online didn't make much sense.
 */
 function randomize(array) {
     for (var currentIndex = array.length-1; currentIndex != 0; currentIndex--) {
@@ -50,6 +48,7 @@ document.getElementById('randomizeButton').onclick = function() {
     document.getElementById("textArea").innerHTML = randomize(wordList).join("\n"); // If a new word list is provided, insert a new argument here
     if (wordList == "") {
         console.warn("There are no values in the MAIN array");
+        alert("There are no values in the MAIN array.");
     }
 }
 
@@ -68,6 +67,7 @@ function updateArray(array) {
     console.log("Updated MAIN wordlist to - " + wordList);
     if (wordList == "") {
         console.warn("There are no values in the MAIN array");
+        alert("There are no values in the MAIN array.");
     }
     return wordList;
 }
