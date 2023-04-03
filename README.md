@@ -15,11 +15,7 @@ personal experience, isn't worth it.
 
 With this website: The student is able to shuffle the words with a single press of a button, making studying/memorization easier, and improving grades.
 
-
-
 As of 3/20/23, this is the newest version of the "English HW Helper"/"English Homework Helper"/"engHW", or any other similar name you might prefer to call it by.
-
-This project was made by Kenneth Vu, a freshman attending Gunderson High School. I would prefer to go by Kenny.
 
 I have also made earlier versions of English HW Helper. They can be seen at
 
