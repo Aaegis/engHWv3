@@ -32,7 +32,7 @@ console.log("Loading selected wordlist - change value/array to select a differen
 document.getElementById('textInput').innerHTML = wordList;
 
 // Takes parameters to switch between multiple word lists if needed.
-/* This function is based off of the Fisher-Yates shuffling algorithm. I learned about it a while back, and I made
+/* This function is the Fisher-Yates shuffling algorithm. I learned about it a while back, and I made
 changes since any examples online didn't make much sense.
 */
 /*
@@ -54,7 +54,7 @@ function randomize(array) {
 are no values in wordList, it will alert the user and output a warning to the console, but nothing major occurs.
 */
 document.getElementById('randomizeButton').onclick = function() {
-    document.getElementById("textArea").innerHTML = randomize(wordList).join("\n"); // If a new word list is provided, insert a new argument here
+    document.getElementById("textArea").innerHTML = randomize(debugWordList).join("\n"); // If a new word list is provided, insert a new argument here
     if (wordList == "") {
         console.warn("There are no values in the MAIN array");
         alert("There are no values in the MAIN array.");
@@ -64,9 +64,9 @@ document.getElementById('randomizeButton').onclick = function() {
 /* This function is for the text input. Upon clicking a button, the text area above will update based on the content
 of this text area.*/
 // This function takes parameters so it can work with other arrays in case debugging is needed.
-/* This function works by taking an array as an argument, then getting the value of textInput. Next, it splits the
-string into an array by separating it by commas. Lastly, it returns the updated wordList, which is the array that
-was separated by commas.
+/* This function works by taking an array as an argument, then getting the value of textInput. The function then sets the value of
+the inputted array as the value of textInput. However, the array's value is currently one entire string, and it needs to be
+separated so that it can be shuffled. To do that, it splits the string into an array by separating it by commas. Lastly, it returns the array.
 */
 function updateArray(array) {
     array = document.getElementById('textInput').value;
@@ -75,10 +75,10 @@ function updateArray(array) {
     wordList = arraySplit;
     console.log("Updated MAIN wordlist to - " + wordList);
     if (wordList == "") {
-        console.warn("There are no values in the MAIN array");
-        alert("There are no values in the MAIN array.");
+        console.warn("There are no values in the selected array");
+        alert("There are no values in the selected array.");
     }
-    return wordList;
+    return array;
 }
     
 // When the button is clicked, call updateArray to insert custom words inputted by the user in the text input area.
