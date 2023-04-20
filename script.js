@@ -32,29 +32,26 @@ console.log("Loading selected wordlist - change value/array to select a differen
 document.getElementById('textInput').innerHTML = wordList;
 
 // Takes parameters to switch between multiple word lists if needed.
-/* This function is the Fisher-Yates shuffling algorithm. I learned about it a while back, and I made
-changes since any examples online didn't make much sense.
-*/
 /*
-This function works by creating a temporary array that has the same values as the first array, and then a value
-from the temporary array is randomly selected by rounding down the output from Math.random() multiplied by the 
-current index value. That element replaces the first value in the main array, and every time the loop iterates, 
-it will replace the second, the third, and so on, until all the values have been used.
+This function works by selecting the first value and swapping it with a value in a different place. It will do the same for the next value, and keep
+going until it reaches the end.
 */
 function randomize(array) {
-    for (var currentIndex = array.length-1; currentIndex != 0; currentIndex--) {
-        var randomIndex = Math.floor(Math.random() * currentIndex);
-        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    for (var i = 0; i <= array.length-1; i++) {
+        var randomIndex = Math.floor(Math.random() * i);
+        [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
     }
     console.log("Ran shuffle - " + array);
+    // if (array != wordList) {console.warn("The MAIN wordlist is not being used.");}
     return array;
 }
 
-/* When this button is clicked, it will call the randomize function and set it's value to the text area. If there
-are no values in wordList, it will alert the user and output a warning to the console, but nothing major occurs.
+/* When this button is clicked, it will call the randomize function and set its value to the text area. If there
+are no values in wordList, it will alert the user and output a warning to the console, the program functions normally. However, the output will be
+blank.
 */
 document.getElementById('randomizeButton').onclick = function() {
-    document.getElementById("textArea").innerHTML = randomize(debugWordList).join("\n"); // If a new word list is provided, insert a new argument here
+    document.getElementById("textArea").innerHTML = randomize(wordList).join("\n"); // If a new word list is provided, insert a new argument here
     if (wordList == "") {
         console.warn("There are no values in the MAIN array");
         alert("There are no values in the MAIN array.");
