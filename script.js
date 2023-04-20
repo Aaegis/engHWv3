@@ -3,7 +3,7 @@ BEFORE YOU EXAMINE THIS CODE
 
 Make sure you look at README.md. It has an explanation for this program's purpose and the comments below will make
 more sense.
-Don't forget to view the website live at https://aaegis.github.io/engHWv3/
+Don't forget to view the website live at https://[TEMPORARILY REDACTED].github.io/engHWv3/
 */
 
 // Leaving a reminder for myself in the console incase I forget
@@ -42,7 +42,9 @@ function randomize(array) {
         [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
     }
     console.log("Ran shuffle - " + array);
-    // if (array != wordList) {console.warn("The MAIN wordlist is not being used.");}
+    if (array != wordList) {
+        console.warn("The MAIN wordlist is not being used. Ignore this warning if you intended to use a debug list.");
+    }
     return array;
 }
 

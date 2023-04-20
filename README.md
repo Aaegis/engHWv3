@@ -1,13 +1,11 @@
 This website is live at https://aaegis.github.io/engHWv3/
 
-A project to help students with Mr. Madden's English homework and for the CPT.
+A project to help students with my English homework and for the CPT
 
-This project is made to help students memorize word definitions for Mr. Madden's English vocabulary tests, as well any vocabulary on final(s). It was also created for the Create Performance Task for MS. Cabral's AP Computer Science Principles class.
+This project is made to help students memorize word definitions for my English class's vocabulary tests, as well any vocabulary on final(s). It was also created for the Create Performance Task for my Computer Science Principles class.
 
-I created this project because I wanted to learn web development, have a project for the CPT, but most importantly, help my classmates with their homework. Some time in January of 2023, I was shocked to hear that a large portion of the class would get Cs or lower, and I think I might be able to help them. With this website, the student is intended to use it to generate a list of the words they need to memorize in a random order. From there, they can copy
-the outputted text into a text editor (such as Google Docs, Notepad, Notepad++, etc.) and see if they can write down
-their definitions without having to look it up. Eventually, they would have memorized the words, and should hopefully
-pass any test or final.
+I created this project because I wanted to learn web development, have a project for the CPT, but most importantly, help my classmates with their homework. Some time in January of 2023, I was shocked to hear that a large portion of the class would get Cs or lower, and I think I might be able to help them. With this website, the student is intended to use it to generate a list of the words they need to memorize in a random order. From there, they can copy the outputted text into a text editor (such as Google Docs, Notepad, Notepad++, etc.) and see if they can write down
+their definitions without having to look it up. Eventually, they would have memorized the words, and should hopefully pass any test or final.
 
 Without this website: The student either must try to memorize a word's definition, either by writing down the words'
 definitions, or manually shuffling it themselves. Manually shuffling it themselves is time consuming, and in my
