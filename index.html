@@ -1,151 +1,74 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--The head defines the title, gets bootstrap from the Content Delivery Network, and locates the .css
-        and .js files.-->
-        <title>Eng HW Helper V3</title>
+        <title>Spanish Hw Helper V2</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <script defer src="script.js"></script>
         <meta charset="utf-8">
     </head>
-
-
-
     <body>
+
         <!--Head-->
-        <!--This is the very top part of the website, defined by the gray bar.-->
+
         <div class="container-fluid p-2 bg-dark text-white" style="text-align:center;">
-            <h1 style="display: inline;">English Homework Helper V3</h1>
-            <p style="display: inline;">By: Kenny Vu </p>
-            <script>console.log("Loaded head");</script>
+            <h1 style="display: inline;">Spanish HW Helper V2</h1>
+            <p style="display: inline;">By Kenny Vu</p>
         </div>
 
         <!--Body/Main-->
-        <!--This is the main part of the website.-->
-
-        <!--This is the button that the user clicks in order to use the website.-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 my-3" style="border-radius:20px; text-align:center;">
                     <button id="randomizeButton" type="button" class="display-6">Randomize!</button><br><br>
-                    <script>console.log("Loaded Randomize! button");</script>
                 </div>
             </div>
         </div>
-
-        <!--This is the middle section of the website, where the output as well as some info is.-->
         <div class="container">
             <div class="row">
-                <!--The text area on the left, which should contain all the vocabulary words upon button press.-->
-
-                <!--In "class", the columns are defined, such as how small the screen size should be until it breaks,
-                padding, distance from parts the sides of the screens, and the color.-->
                 <div class="col-sm-5 p-3 my-0 mx-0 bg-dark text-white" style="text-align:left; border-radius:20px; border-color:white; border-width: 5px;">
-                    <textarea id="textArea" class="form-control p-3 bg-dark text-light" rows="44">Click the Randomize! button to generate a list of English vocabulary words!</textarea>
-                    <script>console.log("Loaded body - left - textarea");</script>
+                    <textarea id="textArea" class="form-control p-3 bg-dark text-light" rows="44">Click the Randomize! button to generate a list of Spanish words!</textarea>
                 </div>
-
-                <!--An empty column to provide space in between the two panels-->
                 <div class="col-sm-1"></div>
-
-                <!--This panel (the panel on the right side) contains information such as how to use the website,
-                socials, and more.-->
                 <div class="col-sm-6 p-3 bg-dark text-white" style="text-align:center; border-radius:20px; border-color:white; border-width:5px;"> 
-                    <!--The "title" for the panel on the right-->
                     <h1 class="display-3" style="text-align:center;">INFO</h1><hr/>
-
-                    <!--This is the section that instructs the user on what to do with the website. Without it, the website
-                    would seem like just a thing that shuffles words. While it technically is, I want to make it clear that
-                    the user is intended to copy and paste it into a text editor and try to memorize them.-->
                     <h2 style="text-align:center">How to use</h2><br>
                     <h6>
                         <h4>1.</h4> Press the <mark>Randomize!</mark> button.<br><br>
                         <h4>2.</h4> Copy the outputted text into a text editor, such as Notepad, Google Docs, etc.<br><br>
                         <h4>3.</h4> Try your best to write down their definitions without looking it up.<br><br>
                         <h4>4.</h4> Check their definitions once you have them down for each word. Try again from step 1 if you made a mistake.<br><br>
-                        <h4>5.</h4> You're all set! You've now memorized the definitions of each word.<br><br>
-                        <h4>6.</h4> Scroll down if you'd like to input your own words.
+                        <h4>5.</h4> You're all set! You've now memorized the definitions of each word.
                     </h6>
                     <hr/>
-
-                    <!--Just a little disclaimer showing that this website is not automatically updated.-->
                     <h6>I have to manually update this site, the words <br>
                         will not update to newer ones automatically. <br><br>
 
                         Please do not rely on this website to study. <br>
-                        always have a backup way to study for a test. 
+                        always have a backup way to study for a test. <br><br>
+
+                        Thanks to Harrison Nguyen for providing the idea and Spanish words!
                     </h6>
                     <hr/>
-                    <h4 style="text-align:center">Socials</h4> <!--These are my socials.-->
-                    <h6>Removed, sorry!</h6><hr/>
+                    <h4 style="text-align:center">Socials</h4>
+                    <a href="https://instagram.com/aaegis_?igshid=ZDdkNTZiNTM=">Instagram</a><br>
+                    <a href="https://github.com/Aaegis">Github profile</a><br>
+                    <a href="https://github.com/Aaegis/spanishHwHelper">View website source code (Github)</a><br>
+                    <p>Email: Kennyvu.uc@gmail.com</p><hr/>
 
-                    <script>
-                    
-                    //
-                     console.warn("Socials have been temporary removed for anonymity - this warning is intentional");
-                    //
-
-                    </script>
-
-                    <!--These are other websites that the user might want to check out.-->
                     <h4 style="text-align:center">Other websites I made</h4>
-                    <h6>Removed, sorry!</h6>
-                    <script>console.log("Loaded body - right - INFO/SOCIALS");
-                    
-                    //
-                    console.warn("Other websites links have been temporary removed for anonymity - this warning is intentional");
-                    //
-
-                    </script>
+                    <a href="https://aaegis.github.io/engHWv3/">English Vocab Helper</a><br>
+                    <a href="https://aaegis.github.io/spanishHwHelper/">Spanish Homework Helper (Version 1, will not be updated)</a><br>
                 </div>
-            </div>
-        </div><br><br>
-
-        <!--Button for text area input-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 my-3 mx-5" style="text-align:center">
-                    <button type="button" class="display-6" style="text-align:center;" id="update">Update!</button>
-                    <script>console.log("Loaded lower body - left - Update! button");</script>
-                </div>
-
-                <!--The text right next to the button-->
-                <div class="col-sm-4 bg-dark text-light p-3" style="text-align:center; border-radius:20px;">
-                    <p>Use this area to add/remove words from the list!<br>
-                    Make sure you press <mark>Randomize!</mark> again.<br>
-                    Separate each value by a comma.</p>
-                    <script>console.log("Loaded lower body - left - textarea");</script>
-                </div>
-                <div class="col-sm-3"></div>
             </div>
         </div>
-        <br>
-
-        <!--Text area input-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-10 p-3 bg-dark text-light" style="border-radius: 20px">
-                <textarea rows="5" cols="142" id="textInput" class="form-control p-3 bg-dark text-light"></textarea>
-                <script>console.log("Loaded lower body - lower middle - textarea (input)");</script>
-                </div>
-                <div class="col-sm-1"></div>
-            </div>
-        </div>
-
         <!--Footer-->
-        <!--This is the bottom bar of my website. -->
-        <br><br><br><br> <!--I feel like there's a more efficient way to do this rather than chaining lots of <br> tags?
-        I did this just so that there would be some space between the above panels and the bar on the bottom.-->
-
+        <br><br><br><br> <!--br go brrrrrrrrrrrrrrrrr-->
         <div class="container-fluid bg-dark text-white p-3 my-0">
-            <h5 class="display-6" style="font-size:15px; text-align:center;"></h1><hr/> <!--Website developed by NAME-->
-
-            <h5 class="display-6" style="font-size:15px; text-align:center;">This website was made for
-            the CPT in my Computer Science Principles class. <button id="bogosortButton" type="button">
-bogosort</button></h5>
-            <script>console.log("Loaded footer - all - footer");</script>
+            <h5 class="display-6" style="font-size:15px; text-align:center;">Website developed by Kenny Vu, Spanish words sourced by Harrison Nguyen</h1><hr/>
+            <h5 class="display-6" style="font-size:15px; text-align:center;">This website is not approved by Gunderson High School or San Jose Unified School District.
+            Please contact me at kennyvu.uc@gmail.com with any concerns.</h5>
         </div>
     </body>
 </html>
